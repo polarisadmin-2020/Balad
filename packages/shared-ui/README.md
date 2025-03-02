@@ -25,6 +25,18 @@ function MyComponent() {
 }
 ```
 
+## Environment Variables
+
+This package uses the following environment variables:
+
+- `STORYBOOK_PORT`: Port for running Storybook (default: 6006)
+
+Copy `.env.example` to `.env` and adjust the values as needed:
+
+```bash
+cp .env.example .env
+```
+
 ## Component Generation Process
 
 This library uses a component generation system that converts Figma JSON exports into React components.

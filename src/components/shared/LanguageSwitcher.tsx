@@ -1,0 +1,1 @@
+// This component has been removed as we're no longer handling internationalization
