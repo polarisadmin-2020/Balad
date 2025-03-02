@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Typography styles */
+  .display-2xl {
+    @apply text-display-2xl font-regular tracking-[-0.02em];
+  }
+  .display-2xl-medium {
+    @apply text-display-2xl font-medium tracking-[-0.02em];
+  }
+  .display-2xl-semibold {
+    @apply text-display-2xl font-semibold tracking-[-0.02em];
+  }
+  .display-2xl-bold {
+    @apply text-display-2xl font-bold tracking-[-0.02em];
+  }
+
+  .display-xl {
+    @apply text-display-xl font-regular tracking-[-0.02em];
+  }
+  .display-xl-medium {
+    @apply text-display-xl font-medium tracking-[-0.02em];
+  }
+  .display-xl-semibold {
+    @apply text-display-xl font-semibold tracking-[-0.02em];
+  }
+  .display-xl-bold {
+    @apply text-display-xl font-bold tracking-[-0.02em];
+  }
+
+  .display-lg {
+    @apply text-display-lg font-regular tracking-[-0.02em];
+  }
+  .display-lg-medium {
+    @apply text-display-lg font-medium tracking-[-0.02em];
+  }
+  .display-lg-semibold {
+    @apply text-display-lg font-semibold tracking-[-0.02em];
+  }
+  .display-lg-bold {
+    @apply text-display-lg font-bold tracking-[-0.02em];
+  }
+
+  .display-md {
+    @apply text-display-md font-regular tracking-[-0.02em];
+  }
+  .display-md-medium {
+    @apply text-display-md font-medium tracking-[-0.02em];
+  }
+  .display-md-semibold {
+    @apply text-display-md font-semibold tracking-[-0.02em];
+  }
+  .display-md-bold {
+    @apply text-display-md font-bold tracking-[-0.02em];
+  }
+
+  .display-sm {
+    @apply text-display-sm font-regular;
+  }
+  .display-sm-medium {
+    @apply text-display-sm font-medium;
+  }
+  .display-sm-semibold {
+    @apply text-display-sm font-semibold;
+  }
+  .display-sm-bold {
+    @apply text-display-sm font-bold;
+  }
+
+  .display-xs {
+    @apply text-display-xs font-regular;
+  }
+  .display-xs-medium {
+    @apply text-display-xs font-medium;
+  }
+  .display-xs-semibold {
+    @apply text-display-xs font-semibold;
+  }
+  .display-xs-bold {
+    @apply text-display-xs font-bold;
+  }
+
+  .text-xl {
+    @apply text-text-xl font-regular;
+  }
+  .text-xl-medium {
+    @apply text-text-xl font-medium;
+  }
+  .text-xl-semibold {
+    @apply text-text-xl font-semibold;
+  }
+  .text-xl-bold {
+    @apply text-text-xl font-bold;
+  }
+
+  .text-lg {
+    @apply text-text-lg font-regular;
+  }
+  .text-lg-medium {
+    @apply text-text-lg font-medium;
+  }
+  .text-lg-semibold {
+    @apply text-text-lg font-semibold;
+  }
+  .text-lg-bold {
+    @apply text-text-lg font-bold;
+  }
+
+  .text-md {
+    @apply text-text-md font-regular;
+  }
+  .text-md-medium {
+    @apply text-text-md font-medium;
+  }
+  .text-md-semibold {
+    @apply text-text-md font-semibold;
+  }
+  .text-md-bold {
+    @apply text-text-md font-bold;
+  }
+
+  .text-sm {
+    @apply text-text-sm font-regular;
+  }
+  .text-sm-medium {
+    @apply text-text-sm font-medium;
+  }
+  .text-sm-semibold {
+    @apply text-text-sm font-semibold;
+  }
+  .text-sm-bold {
+    @apply text-text-sm font-bold;
+  }
+
+  .text-xs {
+    @apply text-text-xs font-regular;
+  }
+  .text-xs-medium {
+    @apply text-text-xs font-medium;
+  }
+  .text-xs-semibold {
+    @apply text-text-xs font-semibold;
+  }
+  .text-xs-bold {
+    @apply text-text-xs font-bold;
+  }
+
+  /* Grid system */
+  .grid-cols-auto-2 {
+    @apply grid-cols-2 gap-8;
+  }
+  .grid-cols-auto-3 {
+    @apply grid-cols-3 gap-8;
+  }
+  .grid-cols-auto-5 {
+    @apply grid-cols-5 gap-8;
+  }
+  .grid-cols-auto-6 {
+    @apply grid-cols-6 gap-8;
+  }
+  .grid-cols-auto-12 {
+    @apply grid-cols-12 gap-8;
+  }
+}
