@@ -1,11 +1,53 @@
-# Balad
+# Shared UI Components
 
-## Feel free to delete this file and replace it with your own content.
+This repository contains a collection of shared UI components built with React, TypeScript, and Tailwind CSS.
 
-## Repository Initialization Notice
+## Features
 
-This repository was automatically initialized by the Bolt to GitHub extension.
+- Reusable UI components
+- Built with React and TypeScript
+- Styled with Tailwind CSS
+- Accessible and responsive design
+- Dark mode support
 
-**Auto-Generated Repository**
-- Created to ensure a valid Git repository structure
-- Serves as an initial commit point for your project
+## Getting Started
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+### Build
+
+```bash
+npm run build
+```
+
+## Components
+
+The library includes the following components:
+
+- Button
+- Checkbox
+- Avatar
+- Card
+- Breadcrumb
+- ButtonClose
+- Accordion
+- NavHeader
+- Tag
+- Switch
+- TextInput
+- Dropdown
+- DatePicker
+
+## License
+
+MIT
