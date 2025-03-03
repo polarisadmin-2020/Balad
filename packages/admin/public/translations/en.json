@@ -1,0 +1,21 @@
+{
+  "fieldsTab": "Create Fields",
+  "templatesTab": "Create Templates",
+  "fieldTypes": "Field Types",
+  "fieldCreationLocation": "Field Creation Location",
+  "textFields": "Input Fields",
+  "choiceFields": "Choice Fields",
+  "fileFields": "Files & Images",
+  "locationFields": "Geographic Location",
+  "search": "Search",
+  "createField": "Create Field",
+  "editField": "Edit Field",
+  "addField": "Add Field",
+  "fieldNameAr": "Field Name in Arabic",
+  "fieldNameEn": "Field Name in English",
+  "required": "Required Field",
+  "editable": "Editable",
+  "cancel": "Cancel",
+  "save": "Save",
+  "selectToday": "Select Today"
+}

@@ -1,0 +1,6 @@
+/* Import all service design styles */
+@import './layout.css';
+@import './header.css';
+@import './sidebar.css';
+@import './content.css';
+@import './modal.css';

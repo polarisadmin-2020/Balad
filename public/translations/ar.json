@@ -1,0 +1,21 @@
+{
+  "fieldsTab": "إنشاء الحقول",
+  "templatesTab": "إنشاء النماذج",
+  "fieldTypes": "أنواع الحقول",
+  "fieldCreationLocation": "مكان إنشاء الحقول",
+  "textFields": "حقول الإدخال",
+  "choiceFields": "حقول الاختيار",
+  "fileFields": "الملفات والصور",
+  "locationFields": "الموقع الجغرافي",
+  "search": "البحث",
+  "createField": "إنشاء حقل",
+  "editField": "تعديل بيانات الحقل",
+  "addField": "إضافة الحقل",
+  "fieldNameAr": "اسم الحقل باللغة العربية",
+  "fieldNameEn": "اسم الحقل باللغة الإنجليزية",
+  "required": "حقل مطلوب",
+  "editable": "إمكانية التعديل",
+  "cancel": "إلغاء",
+  "save": "حفظ",
+  "selectToday": "اختيار اليوم"
+}
