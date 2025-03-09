@@ -13,7 +13,7 @@ export const useTheme = () => {
       setTheme(savedTheme);
       document.documentElement.classList.toggle('dark', savedTheme === 'dark');
     } else {
-      // Default to light theme
+
       localStorage.setItem('theme', 'light');
       document.documentElement.classList.remove('dark');
     }

@@ -204,6 +204,11 @@ module.exports = {
         'span-5': 'span 5 / span 5',
         'span-6': 'span 6 / span 6',
         'span-12': 'span 12 / span 12',
+
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
       },
     },
   },

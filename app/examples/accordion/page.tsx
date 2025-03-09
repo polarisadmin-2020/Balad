@@ -16,6 +16,7 @@ interface AccordionProps {
 }
 
 const Accordion: React.FC<AccordionProps> = ({ 
+
   title, 
   children, 
   defaultOpen = false,
@@ -64,6 +65,7 @@ interface AccordionsListProps {
 }
 
 const AccordionsList: React.FC<AccordionsListProps> = ({ accordions, flush = false }) => {
+
   return (
     <div className={`divide-y ${flush ? 'border-t border-b' : 'border rounded-md'}`}>
       {accordions.map((accordion, index) => (

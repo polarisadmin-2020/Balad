@@ -235,5 +235,6 @@
   }
   .grid-cols-auto-12 {
     @apply grid-cols-12 gap-8;
+
   }
 }

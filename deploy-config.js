@@ -24,6 +24,7 @@ const environments = {
     apiUrl: 'http://172.16.2.57:3001',
     envFile: '.env.production',
     host: '172.16.2.57'
+
   }
 };
 
@@ -40,6 +41,7 @@ function generateEnvFile(env) {
 
 NODE_ENV=${env}
 HOST=${config.host}
+
 
 # Application
 NEXT_PUBLIC_APP_URL=${config.url}

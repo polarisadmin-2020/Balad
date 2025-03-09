@@ -61,6 +61,7 @@ The repository includes shared image directories that can be used across all mic
 - `/packages/shared-ui/public/images/` - For shared images used across all repos
 - `/packages/admin/public/images/` - For admin-specific images
 
+
 ## Environment Setup
 
 This project uses environment variables for configuration. Each package can have its own environment variables.

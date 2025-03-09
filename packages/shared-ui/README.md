@@ -101,6 +101,7 @@ packages/shared-ui/
 ├── figma-exports/       # Figma JSON exports
 ├── public/
 │   └── images/          # Shared images used across all repos
+
 ├── src/
 │   ├── components/      # Generated React components
 │   ├── hooks/           # Custom React hooks

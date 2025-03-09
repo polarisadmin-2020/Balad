@@ -6,6 +6,7 @@
     "dev": "next dev -p 3001 -H 172.16.2.57",
     "build": "next build",
     "start": "next start -p 3001 -H 172.16.2.57",
+
     "lint": "next lint",
     "generate-components": "node scripts/generate-components.js"
   },
@@ -34,6 +35,7 @@
     "tailwind-merge": "^2.0.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.4"
+
   },
   "devDependencies": {
     "@types/node": "20.6.2",
@@ -50,4 +52,5 @@
   "workspaces": [
     "packages/*"
   ]
+
 }
