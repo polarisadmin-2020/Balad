@@ -3,36 +3,39 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3001 -H 172.16.2.57",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3001 -H 172.16.2.57",
+
     "lint": "next lint",
     "generate-components": "node scripts/generate-components.js"
   },
   "dependencies": {
-    "@hookform/resolvers": "^3.9.0",
-    "@monorepo/shared-ui": "*",
-    "@radix-ui/react-accordion": "^1.2.0",
-    "@radix-ui/react-alert-dialog": "^1.1.1",
-    "@radix-ui/react-aspect-ratio": "^1.1.0",
-    "@radix-ui/react-avatar": "^1.1.0",
-    "@radix-ui/react-checkbox": "^1.1.1",
-    "@radix-ui/react-dialog": "^1.1.1",
-    "@radix-ui/react-dropdown-menu": "^2.1.1",
-    "@radix-ui/react-label": "^2.1.0",
-    "@radix-ui/react-slot": "^1.1.0",
-    "@radix-ui/react-tabs": "^1.1.0",
-    "@radix-ui/react-toast": "^1.2.1",
+    "@hookform/resolvers": "^3.3.2",
+    "@monorepo/shared-ui": "file:packages/shared-ui",
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-alert-dialog": "^1.0.5",
+    "@radix-ui/react-aspect-ratio": "^1.0.3",
+    "@radix-ui/react-avatar": "^1.0.4",
+    "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-toast": "^1.1.5",
     "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.446.0",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.292.0",
     "next": "13.5.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "^7.53.0",
-    "tailwind-merge": "^2.6.0",
+    "react-hook-form": "^7.48.2",
+    "styled-components": "^6.1.1",
+    "tailwind-merge": "^2.0.0",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.23.8"
+    "zod": "^3.22.4"
+
   },
   "devDependencies": {
     "@types/node": "20.6.2",
@@ -45,5 +48,9 @@
     "prettier": "^3.0.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+
 }

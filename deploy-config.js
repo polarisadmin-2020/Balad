@@ -6,21 +6,25 @@
 const environments = {
   development: {
     name: 'Development',
-    url: 'http://localhost:3000',
-    apiUrl: 'http://localhost:3001',
-    envFile: '.env.local'
+    url: 'http://172.16.2.57:3000',
+    apiUrl: 'http://172.16.2.57:3001',
+    envFile: '.env.local',
+    host: '172.16.2.57'
   },
   staging: {
     name: 'Staging',
-    url: 'https://staging.your-app-domain.com',
-    apiUrl: 'https://api-staging.your-app-domain.com',
-    envFile: '.env.staging'
+    url: 'http://172.16.2.57:3000',
+    apiUrl: 'http://172.16.2.57:3001',
+    envFile: '.env.staging',
+    host: '172.16.2.57'
   },
   production: {
     name: 'Production',
-    url: 'https://your-app-domain.com',
-    apiUrl: 'https://api.your-app-domain.com',
-    envFile: '.env.production'
+    url: 'http://172.16.2.57:3000',
+    apiUrl: 'http://172.16.2.57:3001',
+    envFile: '.env.production',
+    host: '172.16.2.57'
+
   }
 };
 
@@ -36,6 +40,8 @@ function generateEnvFile(env) {
 # Generated on ${new Date().toISOString()}
 
 NODE_ENV=${env}
+HOST=${config.host}
+
 
 # Application
 NEXT_PUBLIC_APP_URL=${config.url}

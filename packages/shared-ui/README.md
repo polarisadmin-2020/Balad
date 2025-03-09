@@ -25,6 +25,15 @@ function MyComponent() {
 }
 ```
 
+## Shared Images
+
+The `public/images` directory contains shared images that can be used across all repositories in the monorepo. To use these images:
+
+```jsx
+// In any component
+<img src="/shared-ui/images/your-image.jpg" alt="Description" />
+```
+
 ## Environment Variables
 
 This package uses the following environment variables:
@@ -90,6 +99,9 @@ The library includes the following components:
 ```
 packages/shared-ui/
 ├── figma-exports/       # Figma JSON exports
+├── public/
+│   └── images/          # Shared images used across all repos
+
 ├── src/
 │   ├── components/      # Generated React components
 │   ├── hooks/           # Custom React hooks

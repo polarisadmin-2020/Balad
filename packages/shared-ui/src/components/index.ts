@@ -8,3 +8,9 @@ export * from './Avatar';
 export * from './Card';
 export * from './Breadcrumb';
 export * from './ButtonClose';
+export * from './Table';
+export * from './TableOfContent';
+export * from './FileUpload';
+export * from './Modal';
+export * from './Switch';
+

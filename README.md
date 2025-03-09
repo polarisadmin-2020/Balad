@@ -1,6 +1,5 @@
 # Shared UI Components Monorepo
 
-
 This repository contains a collection of shared UI components built with React, TypeScript, and Tailwind CSS.
 
 ## Features
@@ -10,6 +9,7 @@ This repository contains a collection of shared UI components built with React, 
 - Styled with Tailwind CSS
 - Accessible and responsive design
 - Dark mode support
+- Microfrontend architecture
 
 ## Getting Started
 
@@ -30,6 +30,37 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## Project Structure
+
+```
+├── packages/
+│   ├── shared-ui/       # Shared UI components library
+│   │   ├── public/
+│   │   │   └── images/  # Shared images used across all repos
+│   │   └── src/
+│   │       └── components/
+│   │
+│   └── admin/           # Admin microfrontend
+│       ├── public/
+│       │   └── images/  # Admin-specific images
+│       ├── app/
+│       └── components/
+│
+├── public/
+│   └── images/          # Main application images
+│
+└── app/                 # Main Next.js application
+```
+
+## Shared Images
+
+The repository includes shared image directories that can be used across all microfrontends:
+
+- `/public/images/` - For the main application
+- `/packages/shared-ui/public/images/` - For shared images used across all repos
+- `/packages/admin/public/images/` - For admin-specific images
+
 
 ## Environment Setup
 
@@ -64,45 +95,6 @@ cp .env.example .env
 ```
 
 3. Adjust the values as needed.
-
-### Automated Environment Setup
-
-You can use the setup script to generate environment files for different environments:
-
-```bash
-node scripts/setup-env.js [environment]
-```
-
-Available environments:
-- `development` (default)
-- `staging`
-- `production`
-
-Example:
-```bash
-node scripts/setup-env.js production
-```
-
-## Deployment
-
-To deploy the project:
-
-1. Set up the environment for your target deployment:
-
-```bash
-node scripts/setup-env.js production
-```
-
-2. Build the project:
-
-```bash
-npm run build
-```
-
-3. Deploy using the deploy script:
-
-```bash
-GITHUB_TOKEN=your_token node deploy.js
 
 ## Components
 

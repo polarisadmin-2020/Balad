@@ -156,7 +156,6 @@ module.exports = {
           900: '#074D31',
           950: '#053321',
         },
-
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -205,6 +204,7 @@ module.exports = {
         'span-5': 'span 5 / span 5',
         'span-6': 'span 6 / span 6',
         'span-12': 'span 12 / span 12',
+
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',

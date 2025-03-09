@@ -6,7 +6,17 @@ import Link from 'next/link';
 
 // Since we don't have the actual Accordion component implementation,
 // we'll create a simplified version for demonstration purposes
-const Accordion = ({ 
+interface AccordionProps {
+  title: React.ReactNode;
+  children: React.ReactNode;
+  defaultOpen?: boolean;
+  iconAlignment?: "leading" | "trailing";
+  flush?: boolean;
+  disabled?: boolean;
+}
+
+const Accordion: React.FC<AccordionProps> = ({ 
+
   title, 
   children, 
   defaultOpen = false,
@@ -44,7 +54,18 @@ const Accordion = ({
   );
 };
 
-const AccordionsList = ({ accordions, flush = false }) => {
+interface AccordionData {
+  title: string;
+  content: React.ReactNode;
+}
+
+interface AccordionsListProps {
+  accordions: AccordionData[];
+  flush?: boolean;
+}
+
+const AccordionsList: React.FC<AccordionsListProps> = ({ accordions, flush = false }) => {
+
   return (
     <div className={`divide-y ${flush ? 'border-t border-b' : 'border rounded-md'}`}>
       {accordions.map((accordion, index) => (
