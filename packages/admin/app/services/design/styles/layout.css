@@ -1,0 +1,58 @@
+/* Service Design Layout Styles */
+
+/* Main layout */
+.service-design-container {
+  min-height: 100vh;
+  background-color: #092A1E;
+  color: white;
+}
+
+/* Content layout */
+.content-container {
+  display: flex;
+  min-height: calc(100vh - 4.125rem);
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 15rem;
+  background-color: #092A1E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 0;
+}
+
+.right-sidebar {
+  order: 3;
+}
+
+.left-sidebar {
+  order: 1;
+}
+
+.main-content {
+  order: 2;
+  flex: 1;
+  background-color: white;
+  color: #161616;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+/* RTL support */
+[dir="rtl"] .field-card-title-icon {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+[dir="rtl"] .field-card-action-button {
+  margin-left: 0;
+  margin-right: 0.25rem;
+}
+
+[dir="rtl"] .checkbox-label {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
