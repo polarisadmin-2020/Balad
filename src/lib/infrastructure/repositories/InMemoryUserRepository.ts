@@ -3,6 +3,7 @@ import { UserRepository } from '../../core/domain/repositories/UserRepository';
 
 // In-memory implementation of the UserRepository interface
 export class InMemoryUserRepository implements UserRepository {
+  private apiUrl = process.env.NEXT_PUBLIC_API_URL;
   private users: User[] = [
     {
       id: '1',
@@ -23,51 +24,84 @@ export class InMemoryUserRepository implements UserRepository {
   ];
 
   async findById(id: string): Promise<User | null> {
-    const user = this.users.find(user => user.id === id);
-    return user || null;
+    try {
+      const response = await fetch(`${this.apiUrl}/users/${id}`);
+      if (!response.ok) return null;
+      return await response.json();
+    } catch (error) {
+      console.error('Error fetching user:', error);
+      return null;
+    }
   }
 
   async findByEmail(email: string): Promise<User | null> {
-    const user = this.users.find(user => user.email === email);
-    return user || null;
+    try {
+      const response = await fetch(`${this.apiUrl}/users?email=${email}`);
+      if (!response.ok) return null;
+      const users = await response.json();
+      return users[0] || null;
+    } catch (error) {
+      console.error('Error fetching user by email:', error);
+      return null;
+    }
   }
 
   async findAll(): Promise<User[]> {
-    return [...this.users];
+    try {
+      const response = await fetch(`${this.apiUrl}/users`);
+      if (!response.ok) return [];
+      return await response.json();
+    } catch (error) {
+      console.error('Error fetching users:', error);
+      return [];
+    }
   }
 
   async create(userData: Omit<User, 'id' | 'createdAt' | 'updatedAt'>): Promise<User> {
-    const newUser: User = {
-      ...userData,
-      id: String(this.users.length + 1),
-      createdAt: new Date(),
-      updatedAt: new Date()
-    };
-    
-    this.users.push(newUser);
-    return newUser;
+    try {
+      const response = await fetch(`${this.apiUrl}/users`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      });
+      
+      if (!response.ok) throw new Error('Failed to create user');
+      return await response.json();
+    } catch (error) {
+      console.error('Error creating user:', error);
+      throw error;
+    }
   }
 
   async update(id: string, userData: Partial<User>): Promise<User | null> {
-    const index = this.users.findIndex(user => user.id === id);
-    
-    if (index === -1) {
+    try {
+      const response = await fetch(`${this.apiUrl}/users/${id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      });
+      
+      if (!response.ok) return null;
+      return await response.json();
+    } catch (error) {
+      console.error('Error updating user:', error);
       return null;
     }
-    
-    const updatedUser = {
-      ...this.users[index],
-      ...userData,
-      updatedAt: new Date()
-    };
-    
-    this.users[index] = updatedUser;
-    return updatedUser;
   }
 
   async delete(id: string): Promise<boolean> {
-    const initialLength = this.users.length;
-    this.users = this.users.filter(user => user.id !== id);
-    return this.users.length !== initialLength;
+    try {
+      const response = await fetch(`${this.apiUrl}/users/${id}`, {
+        method: 'DELETE',
+      });
+      return response.ok;
+    } catch (error) {
+      console.error('Error deleting user:', error);
+      return false;
+    }
   }
 }
